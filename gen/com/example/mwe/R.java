@@ -21,13 +21,25 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int arka=0x7f020000;
+        public static final int ayetarka=0x7f020001;
+        public static final int bc1=0x7f020002;
+        public static final int bc9=0x7f020003;
+        public static final int custom_btn_sandrift=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int action_settings=0x7f080006;
+        public static final int ayet=0x7f080001;
+        public static final int dua=0x7f080005;
+        public static final int hadis=0x7f080000;
+        public static final int isim=0x7f080004;
+        public static final int soz=0x7f080003;
+        public static final int sunnet=0x7f080002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int ayet=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -64,5 +76,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int btnStyleSandrift=0x7f060002;
     }
 }
