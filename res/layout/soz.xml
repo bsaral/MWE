@@ -5,23 +5,23 @@
     android:background="@drawable/arka" >
 
     <TextView
-        android:id="@+id/sayfa2"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="353dp"
-        android:layout_toLeftOf="@+id/ayet1"
-        android:text="aa"
+        android:layout_marginLeft="221dp"
+        android:layout_marginTop="291dp"
+        android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/ayet1"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sayfa2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="139dp"
-        android:text="bb"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_centerVertical="true"
+        android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-   
+
 </RelativeLayout>

@@ -1,9 +1,7 @@
 package com.example.mwe;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.TimeZone;
 
 import android.app.Activity;
 import android.database.Cursor;
@@ -11,12 +9,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class Ayet extends Activity {
+public class Hadis extends Activity {
 	
-	
-	private static String SAMPLE_TABLE_NAME = "ayetler";
+	private static String SAMPLE_TABLE_NAME = "hadisler";
 	private SQLiteDatabase sampleDB;
 	public int i ;
 	TextView t1;
@@ -27,15 +23,16 @@ public class Ayet extends Activity {
 	private void createTable()
 	{
 	   sampleDB.execSQL("CREATE TABLE IF NOT EXISTS " + SAMPLE_TABLE_NAME +
-               " (id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, ayet VARCHAR," +
+               " (id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, hadis VARCHAR," +
                " sayfa VARCHAR);");   
 	}
 	
 	
 	
+	
 	private void seedata( int i){
-		t1 = (TextView)findViewById(R.id.ayet1);
-		t2 = (TextView)findViewById(R.id.sayfa2);
+		t1 = (TextView)findViewById(R.id.textView1);
+		t2 = (TextView)findViewById(R.id.textView2);
 		Cursor cursor = sampleDB.rawQuery("SELECT * FROM " + SAMPLE_TABLE_NAME, null);
 		
 			if (cursor != null)
@@ -43,11 +40,11 @@ public class Ayet extends Activity {
 			   cursor.moveToPosition(i);
 			
 			
-			       String ayet = cursor.getString(cursor.getColumnIndex("ayet"));
+			       String hadis = cursor.getString(cursor.getColumnIndex("hadis"));
 			       String sayfa = cursor.getString(cursor.getColumnIndex("sayfa"));
 			       
 			      
-			       t1.setText(ayet);
+			       t1.setText(hadis);
 			       t2.setText(sayfa);
 			       
 			       cursor.close();
@@ -59,13 +56,13 @@ public class Ayet extends Activity {
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ayet);
+		setContentView(R.layout.hadis);
 		
 		
 		sampleDB = openOrCreateDatabase("mwe.db", MODE_PRIVATE, null);
         createTable();
         
-        Date IlkGun=new GregorianCalendar(2013,7,20,00,00).getTime();
+        Date IlkGun=new GregorianCalendar(2013,7,19,00,00).getTime();
         Date SonGun=new Date();
         long Fark=SonGun.getTime()-IlkGun.getTime();
 		
@@ -83,6 +80,14 @@ public class Ayet extends Activity {
 			seedata(sonuc);
 		} 
 			
+
+		
+		
 	}
 	
+	
+
 }
+
+
+

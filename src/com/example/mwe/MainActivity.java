@@ -13,6 +13,11 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	Button ayet;
+	Button hadis;
+	Button sunnet;
+	Button soz;
+	Button isim;
+	Button dua;
 	
 	
 	@Override
@@ -29,6 +34,57 @@ public class MainActivity extends Activity {
 				
 			}
 		});
+		
+		hadis = (Button)findViewById(R.id.hadis);
+		hadis.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent("android.intent.action.HADIS"));
+				
+			}
+		});
+		
+		sunnet = (Button)findViewById(R.id.sunnet);
+		sunnet.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent("android.intent.action.SUNNET"));
+				
+			}
+		});
+		
+		soz = (Button)findViewById(R.id.soz);
+		soz.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent("android.intent.action.SOZ"));
+				
+			}
+		});
+		
+		isim = (Button)findViewById(R.id.isim);
+		isim.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent("android.intent.action.ISIM"));
+				
+			}
+		});
+		
+		dua = (Button)findViewById(R.id.dua);
+		dua.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent("android.intent.action.DUA"));
+				
+			}
+		});
+		
 		
 	}
 
