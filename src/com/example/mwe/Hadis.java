@@ -62,7 +62,7 @@ public class Hadis extends Activity {
 		sampleDB = openOrCreateDatabase("mwe.db", MODE_PRIVATE, null);
         createTable();
         
-        Date IlkGun=new GregorianCalendar(2013,7,19,00,00).getTime();
+        Date IlkGun=new GregorianCalendar(2013,6,27,00,00).getTime();
         Date SonGun=new Date();
         long Fark=SonGun.getTime()-IlkGun.getTime();
 		

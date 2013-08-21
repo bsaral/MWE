@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.mwe.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +25,8 @@
         </activity>
         <activity
             android:name="com.example.mwe.Ayet"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.AYET" />
 
@@ -33,7 +35,8 @@
         </activity>
         <activity
             android:name="com.example.mwe.Hadis"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="nosensor" >
             <intent-filter>
                 <action android:name="android.intent.action.HADIS" />
 
@@ -42,7 +45,8 @@
         </activity>
         <activity
             android:name="com.example.mwe.Sunnet"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="nosensor" >
             <intent-filter>
                 <action android:name="android.intent.action.SUNNET" />
 
@@ -51,7 +55,8 @@
         </activity>
         <activity
             android:name="com.example.mwe.Soz"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.SOZ" />
 
@@ -60,7 +65,8 @@
         </activity>
         <activity
             android:name="com.example.mwe.Isim"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.ISIM" />
 
@@ -69,7 +75,8 @@
         </activity>
         <activity
             android:name="com.example.mwe.Dua"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="nosensor" >
             <intent-filter>
                 <action android:name="android.intent.action.DUA" />
 

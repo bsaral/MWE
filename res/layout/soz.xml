@@ -5,22 +5,22 @@
     android:background="@drawable/arka" >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="221dp"
-        android:layout_marginTop="291dp"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_centerVertical="true"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="39dp"
+        android:layout_marginLeft="73dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 

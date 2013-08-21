@@ -9,9 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="224dp"
-        android:layout_marginTop="316dp"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="24dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
