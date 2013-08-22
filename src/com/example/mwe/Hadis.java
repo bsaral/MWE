@@ -6,6 +6,7 @@ import java.util.GregorianCalendar;
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class Hadis extends Activity {
 	
 	
 	private void seedata( int i){
+		Typeface font_tV=Typeface.createFromAsset(getAssets(), "font/SANFW___.ttf");
 		t1 = (TextView)findViewById(R.id.textView1);
 		t2 = (TextView)findViewById(R.id.textView2);
 		Cursor cursor = sampleDB.rawQuery("SELECT * FROM " + SAMPLE_TABLE_NAME, null);
@@ -45,7 +47,9 @@ public class Hadis extends Activity {
 			       
 			      
 			       t1.setText(hadis);
+			       t1.setTypeface(font_tV);
 			       t2.setText(sayfa);
+			       t2.setTypeface(font_tV);
 			       
 			       cursor.close();
 			}
@@ -62,7 +66,7 @@ public class Hadis extends Activity {
 		sampleDB = openOrCreateDatabase("mwe.db", MODE_PRIVATE, null);
         createTable();
         
-        Date IlkGun=new GregorianCalendar(2013,6,27,00,00).getTime();
+        Date IlkGun=new GregorianCalendar(2013,7,21,00,00).getTime();
         Date SonGun=new Date();
         long Fark=SonGun.getTime()-IlkGun.getTime();
 		

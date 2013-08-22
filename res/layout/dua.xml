@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/arka" >
+    android:background="@drawable/bc1" >
 
     <TextView
         android:id="@+id/textView1"
@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="228dp"
-        android:layout_marginTop="375dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="80dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 

@@ -6,6 +6,7 @@ import java.util.GregorianCalendar;
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class Soz extends Activity {
 	
 	
 	private void seedata( int i){
+		Typeface font_tV=Typeface.createFromAsset(getAssets(), "font/SANFW___.ttf");
 		t1 = (TextView)findViewById(R.id.textView1);
 		t2 = (TextView)findViewById(R.id.textView2);
 		Cursor cursor = sampleDB.rawQuery("SELECT * FROM " + SAMPLE_TABLE_NAME, null);
@@ -44,7 +46,9 @@ public class Soz extends Activity {
 			       
 			      
 			       t1.setText(soz);
+			       t1.setTypeface(font_tV);
 			       t2.setText(kisi);
+			       t2.setTypeface(font_tV);
 			       
 			       cursor.close();
 			}

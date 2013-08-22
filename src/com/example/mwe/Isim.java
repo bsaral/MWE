@@ -6,6 +6,7 @@ import java.util.GregorianCalendar;
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class Isim extends Activity {
 	
 	
 	private void seedata( int i){
+		Typeface font_tV=Typeface.createFromAsset(getAssets(), "font/SANFW___.ttf");
 		t1 = (TextView)findViewById(R.id.textView1);
 		t2 = (TextView)findViewById(R.id.textView2);
 		t3 = (TextView)findViewById(R.id.textView3);
@@ -50,9 +52,13 @@ public class Isim extends Activity {
 			       
 			      
 			       t1.setText(girl);
+			       t1.setTypeface(font_tV);
 			       t2.setText(g_mean);
+			       t2.setTypeface(font_tV);
 			       t3.setText(boy);
+			       t3.setTypeface(font_tV);
 			       t4.setText(b_mean);
+			       t4.setTypeface(font_tV);
 			       
 			       cursor.close();
 			}
@@ -76,9 +82,9 @@ public class Isim extends Activity {
 		int sonuc = (int) (Fark/(1000*60*60*24));
 		
 		
-		 if(sonuc >= 60){
+		 if(sonuc >= 30){
 			
-			int son = sonuc % 60;
+			int son = sonuc % 30;
 			seedata(son);
 		}
 		

@@ -6,6 +6,7 @@ import java.util.GregorianCalendar;
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class Sunnet extends Activity {
 	
 	private void seedata( int i){
 		t1 = (TextView)findViewById(R.id.textView1);
+		Typeface font_tV=Typeface.createFromAsset(getAssets(), "font/SANFW___.ttf");
 		
 		Cursor cursor = sampleDB.rawQuery("SELECT * FROM " + SAMPLE_TABLE_NAME, null);
 		
@@ -43,6 +45,7 @@ public class Sunnet extends Activity {
 			       
 			      
 			       t1.setText(sunnet);
+			       t1.setTypeface(font_tV);
 			      
 			       
 			       cursor.close();
@@ -60,7 +63,7 @@ public class Sunnet extends Activity {
 		sampleDB = openOrCreateDatabase("mwe.db", MODE_PRIVATE, null);
         createTable();
         
-        Date IlkGun=new GregorianCalendar(2013,7,21,00,00).getTime();
+        Date IlkGun=new GregorianCalendar(2013,7,9,00,00).getTime();
         Date SonGun=new Date();
         long Fark=SonGun.getTime()-IlkGun.getTime();
 		

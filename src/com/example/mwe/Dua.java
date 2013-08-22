@@ -6,6 +6,7 @@ import java.util.GregorianCalendar;
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,7 +31,7 @@ public class Dua extends Activity {
 	
 	private void seedata( int i){
 		t1 = (TextView)findViewById(R.id.textView1);
-		
+		Typeface font_tV=Typeface.createFromAsset(getAssets(), "font/SANFW___.ttf");
 		Cursor cursor = sampleDB.rawQuery("SELECT * FROM " + SAMPLE_TABLE_NAME, null);
 		
 			if (cursor != null)
@@ -41,6 +42,7 @@ public class Dua extends Activity {
 			       String dua = cursor.getString(cursor.getColumnIndex("dua"));
 			      
 			       t1.setText(dua);
+			       t1.setTypeface(font_tV);
 			       
 			       cursor.close();
 			}

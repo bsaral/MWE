@@ -2,27 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/arka" >
+    android:background="@drawable/bc1" >
+
+    <TextView
+        android:id="@+id/sayfa2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ayet1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="43dp"
+        android:text="aaaaaaaa"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
         android:id="@+id/ayet1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="53dp"
-       
+        android:layout_below="@+id/sayfa2"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="32dp"
         android:text="bbbbbbb"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/sayfa2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/ayet1"
-        android:layout_alignLeft="@+id/ayet1"
-        android:layout_marginBottom="24dp"
-        android:text="aaaaaaaa"
         android:textAppearance="?android:attr/textAppearanceMedium" />
    
 </RelativeLayout>
