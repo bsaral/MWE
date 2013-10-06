@@ -24,7 +24,7 @@ public class Hadis extends Activity {
 	private void createTable()
 	{
 	   sampleDB.execSQL("CREATE TABLE IF NOT EXISTS " + SAMPLE_TABLE_NAME +
-               " (id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, hadis VARCHAR," +
+               " (_id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, hadis VARCHAR," +
                " sayfa VARCHAR);");   
 	}
 	

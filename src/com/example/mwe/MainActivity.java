@@ -4,12 +4,11 @@ import java.io.IOException;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.database.SQLException;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	Button ayet;
@@ -18,12 +17,34 @@ public class MainActivity extends Activity {
 	Button soz;
 	Button isim;
 	Button dua;
-	
-	
+	DataBaseHelper myDbHelper;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		 
+		
+	        myDbHelper = new DataBaseHelper(this);
+	 
+	        try {
+	 
+	        	myDbHelper.createDataBase();
+	 
+	 	} catch (IOException ioe) {
+	 
+	 		throw new Error("Unable to create database");
+	 
+	 	}
+	 
+	 	try {
+	 
+	 		myDbHelper.openDataBase();
+	 
+	 	}catch(SQLException sqle){
+	 
+	 		throw sqle;
+	 
+	 	}	 
 		
 		ayet = (Button)findViewById(R.id.ayet);
 		ayet.setOnClickListener(new View.OnClickListener() {

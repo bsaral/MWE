@@ -23,7 +23,7 @@ public class Sunnet extends Activity {
 	private void createTable()
 	{
 	   sampleDB.execSQL("CREATE TABLE IF NOT EXISTS " + SAMPLE_TABLE_NAME +
-               " (id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, sunnet VARCHAR);");   
+               " (_id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, sunnet VARCHAR);");   
 	}
 	
 	

@@ -23,7 +23,7 @@ public class Soz extends Activity {
 	private void createTable()
 	{
 	   sampleDB.execSQL("CREATE TABLE IF NOT EXISTS " + SAMPLE_TABLE_NAME +
-               " (id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, soz VARCHAR," +
+               " (_id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, soz VARCHAR," +
                " kisi VARCHAR);");   
 	}
 	

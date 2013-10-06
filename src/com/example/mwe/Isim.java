@@ -25,7 +25,7 @@ public class Isim extends Activity {
 	private void createTable()
 	{
 	   sampleDB.execSQL("CREATE TABLE IF NOT EXISTS " + SAMPLE_TABLE_NAME +
-               " (id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, girl VARCHAR," +
+               " (_id INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL, girl VARCHAR," +
                " g_mean VARCHAR, boy VARCHAR, b_mean VARCHAR);");   
 	}
 	
